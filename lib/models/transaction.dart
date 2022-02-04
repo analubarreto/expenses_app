@@ -1,5 +1,7 @@
+import 'package:uuid/uuid.dart';
+
 class Transaction {
-  final String id;
+  final Uuid id;
   final String title;
   final double amount;
   final DateTime date;

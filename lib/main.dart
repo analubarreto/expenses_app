@@ -22,8 +22,8 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const Card(
+        children: const [
+          Card(
             child: Text('CHART!'),
           ),
           UserTransaction()

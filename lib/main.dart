@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Expenses app',
-      home: MyHomePage(),
+      theme: ThemeData(primarySwatch: Colors.cyan, errorColor: Colors.red),
+      home: const MyHomePage(),
     );
   }
 }
@@ -58,14 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        backgroundColor: Colors.teal,
-        shadowColor: Colors.black45,
         actions: <Widget>[
           IconButton(
             onPressed: () => _startAddNewTransaction(context),
             icon: const Icon(
               Icons.add,
-              color: Colors.white70,
             ),
           ),
         ],
@@ -84,7 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.teal,
         child: const Icon(Icons.add),
         onPressed: () => _startAddNewTransaction(context),
       ),

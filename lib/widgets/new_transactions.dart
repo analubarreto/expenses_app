@@ -36,10 +36,8 @@ class _NewTransactionState extends State<NewTransaction> {
             onSubmitted: (_) => submitData(),
             decoration: const InputDecoration(
               hintText: 'Product\'s name',
-              hintStyle: TextStyle(color: Colors.black26),
               label: Text('Product name'),
             ),
-            style: const TextStyle(color: Colors.black87),
             controller: titleController,
           ),
           TextField(
@@ -49,19 +47,14 @@ class _NewTransactionState extends State<NewTransaction> {
             onSubmitted: (_) => submitData(),
             decoration: const InputDecoration(
               hintText: 'Products\'s price',
-              hintStyle: TextStyle(color: Colors.black26),
               label: Text('Price'),
             ),
-            style: const TextStyle(color: Colors.black87),
             controller: amountController,
           ),
           OutlinedButton(
             onPressed: submitData,
             child: const Text('Add transaction'),
-            style: TextButton.styleFrom(
-                primary: Colors.teal,
-                backgroundColor: Colors.transparent,
-                enableFeedback: true),
+            style: TextButton.styleFrom(enableFeedback: true),
           )
         ],
       ),

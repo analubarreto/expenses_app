@@ -14,7 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Expenses app',
-      theme: ThemeData(primarySwatch: Colors.cyan, errorColor: Colors.red),
+      theme: ThemeData(
+        primarySwatch: Colors.lightGreen,
+        errorColor: Colors.red,
+        fontFamily: 'Quicksand',
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(fontFamily: 'OpenSans', fontSize: 20),
+        ),
+      ),
       home: const MyHomePage(),
     );
   }
@@ -29,8 +36,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [
-    Transaction(const Uuid(), 'New shoes', 69.99, DateTime.now()),
-    Transaction(const Uuid(), 'Cat food', 57.65, DateTime.now()),
+    // Transaction(const Uuid(), 'New shoes', 69.99, DateTime.now()),
+    // Transaction(const Uuid(), 'Cat food', 57.65, DateTime.now()),
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
